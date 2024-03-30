@@ -62,11 +62,11 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
-    <release version="1.8" date="2023-09-23">
+    <release version="1.8" date="2024-03-30">
       <description>
         <ul>
           <li>Improve portrait layout</li>
-          <li>Use GNOME 45</li>
+          <li>Use GNOME 46</li>
           <li>Fix an issue with encoded characters in URLs</li>
         </ul>
       </description>

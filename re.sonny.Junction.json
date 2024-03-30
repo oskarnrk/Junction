@@ -1,7 +1,7 @@
 {
   "id": "re.sonny.Junction",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "45",
+  "runtime-version": "46",
   "sdk": "org.gnome.Sdk",
   "command": "re.sonny.Junction",
   "finish-args": [
@@ -32,24 +32,29 @@
     {
       "name": "blueprint-compiler",
       "buildsystem": "meson",
-      "cleanup": ["*"],
+      "cleanup": [
+        "*"
+      ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v0.10.0/blueprint-compiler-v0.10.0.tar.gz",
-          "sha512": "1f2a9097e3d6a030385c371a01e32caefab6f7ede1979b43492255b504250ac7f44ae22a97656a7c33c0e518236b95d6074baf8f87c53df1fbb1e42eceb39a87"
+          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v0.12.0/blueprint-compiler-v0.12.0.tar.gz",
+          "sha256": "6dbb4ea851cec164030abded5949ea77ff92032e23527e1c0597d7efe0c36a81"
         }
       ]
     },
     {
       "name": "glib",
       "buildsystem": "meson",
-      "config-opts": ["-Dselinux=disabled", "-Dtests=false"],
+      "config-opts": [
+        "-Dselinux=disabled",
+        "-Dtests=false"
+      ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/glib/2.76/glib-2.76.0.tar.xz",
-          "sha256": "525bb703b807142e1aee5ccf222c344e8064b21c0c45677ef594e587874c6797"
+          "url": "https://download.gnome.org/sources/glib/2.80/glib-2.80.0.tar.xz",
+          "sha256": "8228a92f92a412160b139ae68b6345bd28f24434a7b5af150ebe21ff587a561d"
         },
         {
           "type": "patch",
@@ -63,8 +68,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/glib-networking/2.76/glib-networking-2.76.0.tar.xz",
-          "sha256": "149a05a179e629a538be25662aa324b499d7c4549c5151db5373e780a1bf1b9a"
+          "url": "https://download.gnome.org/sources/glib-networking/2.80/glib-networking-2.80.0.tar.xz",
+          "sha256": "d8f4f1aab213179ae3351617b59dab5de6bcc9e785021eee178998ebd4bb3acf"
         }
       ]
     },
@@ -73,6 +78,7 @@
       "buildsystem": "meson",
       "config-opts": [
         "-Dtests=false",
+        "-Ddocs=false",
         "-Dbackend-gtk3=disabled",
         "-Dbackend-gtk4=enabled",
         "-Dbackend-qt5=disabled"
