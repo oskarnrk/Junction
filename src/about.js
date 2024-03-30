@@ -43,11 +43,10 @@ $XDG_CURRENT_DESKTOP ${GLib.getenv("XDG_CURRENT_DESKTOP")}
 $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
   `.trim();
 
-  const dialog = new Adw.AboutWindow({
-    transient_for: application.get_active_window(),
+  const dialog = new Adw.AboutDialog({
     application_name: "Junction",
     developer_name: "Sonny Piers",
-    copyright: "© 2021-2022 Sonny Piers",
+    copyright: "© 2021-2024 Sonny Piers",
     license_type: Gtk.License.GPL_3_0_ONLY,
     version: pkg.version,
     website: "https://junction.sonny.re",
@@ -62,15 +61,11 @@ $XDG_SESSION_TYPE ${GLib.getenv("XDG_SESSION_TYPE")}
       "Tobias Bernard <tbernard@gnome.org>",
     ],
     artists: ["Tobias Bernard <tbernard@gnome.org>"],
-    // If the window is modal - it's not possibly to open
-    // urls from it as it will open a new Junction window
-    // that doesn't register click events
-    modal: false,
   });
   dialog.add_credit_section("Contributors", [
     "Patrick Decat https://github.com/pdecat",
   ]);
-  dialog.present();
+  dialog.present(application.active_window);
 
   return { dialog };
 }

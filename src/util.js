@@ -135,31 +135,6 @@ export function readResource(file) {
   return { resource, scheme, content_type };
 }
 
-// https://gitlab.gnome.org/GNOME/gjs/-/merge_requests/696
-export const stdout = (() => {
-  const { DataOutputStream, UnixOutputStream } = imports.gi.Gio;
-  return new DataOutputStream({
-    base_stream: new UnixOutputStream({ fd: 1 }),
-  });
-})();
-export const stderr = (() => {
-  const { DataOutputStream, UnixOutputStream } = imports.gi.Gio;
-  return new DataOutputStream({
-    base_stream: new UnixOutputStream({ fd: 2 }),
-  });
-})();
-export const stdin = (() => {
-  const { DataInputStream, UnixInputStream } = imports.gi.Gio;
-  return new DataInputStream({
-    base_stream: new UnixInputStream({ fd: 0 }),
-  });
-})();
-// const source = stdin.base_stream.create_source(null);
-// source.set_callback(() => {
-//   log("foo");
-// });
-// source.attach(null);
-
 // A bit hackish but GLib doesn't support launching actions with parameters
 export function openWithAction({ desktop_id, action, location }) {
   const desktopAppInfo = Gio.DesktopAppInfo.new(desktop_id);
