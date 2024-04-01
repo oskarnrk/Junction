@@ -3,30 +3,29 @@
   <id>re.sonny.Junction</id>
   <launchable type="desktop-id">re.sonny.Junction.desktop</launchable>
   <name translatable="no">Junction</name>
-  <developer_name translatable="no">Sonny Piers</developer_name>
+  <developer id="re.sonny">
+    <name translatable="no">Sonny Piers</name>
+  </developer>
   <update_contact>sonnyp@gnome.org</update_contact>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
   <summary>Application chooser</summary>
   <translation type="gettext">re.sonny.Junction</translation>
   <description>
-    <p>Junction lets you choose the application to open files and links.</p>
     <p>
-      After installing make sure to launch the application.
-    </p>
-    <p>
-      Junction will pop up automatically when you open a link in a desktop application.
-
-      Use the mouse or keyboard navigation to choose the application to open the link or file with.
+      Junction pops up automatically when you open a file or link in another app.
+      Use the mouse or keyboard navigation to choose which app you want to open it with.
     </p>
     <p>Features:</p>
     <ul>
-      <li>Choose the application to open with</li>
+      <li>Choose the app to open with</li>
       <li>Show the location before opening</li>
       <li>Edit the URL before opening</li>
-      <li>Show a hint for insecure link</li>
+      <li>Show a hint for insecure links</li>
       <li>Keyboard navigation</li>
-      <li>Middle click to open in multiple applications</li>
+      <li>Supports desktop actions on right click</li>
+      <li>Middle Click or Ctrl + Click to open in multiple applications</li>
+      <li>Linux Mobile support</li>
     </ul>
   </description>
   <url type="homepage">https://junction.sonny.re</url>
@@ -36,28 +35,22 @@
   <url type="vcs-browser">https://junction.sonny.re/source</url>
   <screenshots>
     <screenshot type="default">
-      <image>
+      <image scale="2">
         https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot.png
       </image>
       <caption>Choose the browser to open the link with</caption>
     </screenshot>
     <screenshot>
-      <image>
+      <image scale="2">
         https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-file.png
       </image>
       <caption>Choose the application to open the image with</caption>
     </screenshot>
     <screenshot>
       <image>
-        https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-shortcuts.png
+        https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-mobile.png
       </image>
-      <caption>Junction features great support for keyboard</caption>
-    </screenshot>
-    <screenshot>
-      <image>
-        https://raw.githubusercontent.com/sonnyp/Junction/main/data/screenshot-desktop-actions.png
-      </image>
-      <caption>Desktop actions are supported too</caption>
+      <caption>Junction supports Linux mobile</caption>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1" />
@@ -167,13 +160,10 @@
     <control>touch</control>
   </recommends>
 
-  <custom>
-    <value key="Purism::form_factor">workstation</value>
-    <value key="Purism::form_factor">mobile</value>
-  </custom>
-
-  <color type="primary" scheme_preference="light">#F8ED9E</color>
-  <color type="primary" scheme_preference="dark">#AA7B07</color>
+  <branding>
+    <color type="primary" scheme_preference="light">#F8ED9E</color>
+    <color type="primary" scheme_preference="dark">#AA7B07</color>
+  </branding>
   <custom>
     <value
       key="GnomeSoftware::key-colors"
