@@ -114,6 +114,17 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
     event_controller_click.set_state(Gtk.EventSequenceState.DENIED);
   });
 
+  const event_controller_longpress = new Gtk.GestureLongPress();
+  button.add_controller(event_controller_longpress);
+  event_controller_longpress.connect("pressed", () => {
+    popupActionsMenu({
+      appInfo,
+      popoverMenu,
+      location: entry.get_text(),
+    });
+    event_controller_longpress.set_state(Gtk.EventSequenceState.CLAIMED);
+  });
+
   const controller_key = new Gtk.EventControllerKey();
   button.add_controller(controller_key);
   controller_key.connect(
