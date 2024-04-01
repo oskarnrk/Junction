@@ -82,8 +82,9 @@ export default function AppButton({ appInfo, content_type, entry, window }) {
   const event_controller_click = new Gtk.GestureClick({ button: 0 });
   button.add_controller(event_controller_click);
   event_controller_click.connect("pressed", () => {
+    // event can be a Gdk.ButtonEvent or Gdk.TouchEvent
     const event = event_controller_click.get_current_event();
-    const button = event.get_button();
+    const button = event.get_button?.() ?? Gdk.BUTTON_PRIMARY;
 
     // Right click
     if (button === Gdk.BUTTON_SECONDARY) {
