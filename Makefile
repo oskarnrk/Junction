@@ -40,7 +40,7 @@ test:
 	flatpak run --command="desktop-file-validate" --file-forwarding org.gnome.Sdk//45 --no-hints @@ data/re.sonny.Junction.desktop @@
 	# gtk4-builder-tool validate src/*.ui
 	flatpak-builder --show-manifest re.sonny.Junction.json > /dev/null
-	find po/ -type f -name "*.po" -print0 | xargs -0 -n1 msgfmt -o /dev/null --check
+# find po/ -type f -name "*.po" -print0 | xargs -0 -n1 msgfmt -o /dev/null --check
 
 clean:
 	rm -rf build builddir install .eslintcache

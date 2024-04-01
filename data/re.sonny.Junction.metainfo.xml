@@ -11,7 +11,7 @@
   <project_license>GPL-3.0</project_license>
   <summary>Application chooser</summary>
   <translation type="gettext">re.sonny.Junction</translation>
-  <description>
+  <description translatable="no">
     <p>
       Junction pops up automatically when you open a file or link in another app.
       Use the mouse or keyboard navigation to choose which app you want to open it with.
@@ -56,7 +56,7 @@
   <content_rating type="oars-1.1" />
   <releases>
     <release version="1.8" date="2024-03-30">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Improve portrait layout</li>
           <li>Use GNOME 46</li>
@@ -65,7 +65,7 @@
       </description>
     </release>
     <release version="1.7" date="2023-05-14">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Support multiple lines of options (scroll)</li>
           <li>Support mobile form factors</li>
@@ -76,7 +76,7 @@
       </description>
     </release>
     <release version="1.6" date="2022-10-15">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Use GNOME 43</li>
           <li>Fix the list of recommended applications</li>
@@ -86,7 +86,7 @@
       </description>
     </release>
     <release version="1.5.0" date="2022-01-19">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Add an option "Reveal in Folder" for files</li>
           <li>Reveal document portal file paths</li>
@@ -96,7 +96,7 @@
       </description>
     </release>
     <release version="1.4.0" date="2021-12-23">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Support desktop actions</li>
           <li>Support snap applications</li>
@@ -118,7 +118,7 @@
       </description>
     </release>
     <release version="1.2.0" date="2021-11-14" urgency="high">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Fix for applications that do not support URIs</li>
           <li>Add an option to display application names</li>
@@ -133,7 +133,7 @@
       </description>
     </release>
     <release version="1.1.0" date="2021-10-20" urgency="high">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Fix for missing applications</li>
           <li>Add a Shortcuts window - accessible with &lt;Ctrl&gt;?</li>
