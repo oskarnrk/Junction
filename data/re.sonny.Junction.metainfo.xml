@@ -55,12 +55,13 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
-    <release version="1.8" date="2024-03-30">
+    <release version="1.8" date="2024-04-01">
       <description translatable="no">
         <ul>
-          <li>Improve portrait layout</li>
-          <li>Use GNOME 46</li>
+          <li>Improve mobile support / portrait layout</li>
+          <li>Improve touch support, long press will show dektop actions</li>
           <li>Fix an issue with encoded characters in URLs</li>
+          <li>Use GNOME 46</li>
         </ul>
       </description>
     </release>
