@@ -165,8 +165,8 @@ export function ShowInFolderButton({ file, window }) {
   }
 
   return TileButton({
-    label: _("Open Folder"),
-    tooltip: _("Open in Folder"),
+    label: _("Open Location"),
+    tooltip: _("View File in File Manager"),
     icon_name: "folder-symbolic",
     icon_size: 48,
     onClicked,
