@@ -55,6 +55,14 @@
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="1.9" date="2025-04-18">
+      <description translatable="no">
+        <ul>
+          <li>Restore behavior of listing by most recently used</li>
+          <li>Use GNOME 47</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.8" date="2024-04-01">
       <description translatable="no">
         <ul>
